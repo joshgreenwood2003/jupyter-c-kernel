@@ -8,6 +8,7 @@ WORKDIR /tmp
 COPY ./ jupyter_c_kernel/
 
 RUN pip install --no-cache-dir jupyter_c_kernel/
+RUN pip install RISE
 RUN cd jupyter_c_kernel && install_c_kernel --user
 
 WORKDIR /home/$NB_USER/
